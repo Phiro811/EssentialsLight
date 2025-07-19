@@ -1,0 +1,166 @@
+main: net.phiro.Main
+name: Lol-Plugin
+version: 1.0.2
+api-version: 1.21
+author: Phiro
+description: Ein Plugin mit vielen coolen Features.
+
+commands:
+  repair:
+    description: Repariert alle Items in deinem Inventar.
+    permission: lolplugin.repair
+    permission-message: Du hast keine Berechtigung, Items zu reparieren.
+  heal:
+    description: Heilt einen Spieler.
+    usage: /<command> [Spieler]
+    permission: lolplugin.heal
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  feed:
+    description: Füllt die Hungerleiste eines Spielers.
+    usage: /<command> [Spieler]
+    permission: lolplugin.feed
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  fly:
+    description: Schaltet den Flugmodus an/aus.
+    usage: /<command>
+    permission: lolplugin.fly
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  flyspeed:
+    description: Ändert die Fluggeschwindigkeit.
+    usage: /<command> <Geschwindigkeit>
+    permission: lolplugin.flyspeed
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  explode:
+    description: Lässt eine Explosion an der Position des Spielers explodieren.
+    usage: /<command>
+    permission: lolplugin.explode
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  setspawn:
+    description: Setzt den Spawn-Punkt.
+    usage: /<command>
+    permission: lolplugin.setspawn
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  spawn:
+    description: Teleportiert dich zum Spawn.
+    usage: /<command>
+  sethome:
+    description: Setzt deinen persönlichen Home-Punkt.
+    usage: /<command> <Name>
+    permission: lolplugin.sethome
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  home:
+    description: Teleportiert dich zu deinem Home-Punkt.
+    usage: /<command> <Name>
+  removehome:
+    description: Entfernt einen Home-Punkt.
+    usage: /<command> <Name>
+    permission: lolplugin.removehome
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  setwarp:
+    description: Erstellt einen Warp-Punkt.
+    usage: /<command> <Name>
+    permission: lolplugin.setwarp
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  warp:
+    description: Teleportiert dich zu einem Warp-Punkt.
+    usage: /<command> <Name>
+  removewarp:
+    description: Entfernt einen Warp-Punkt.
+    usage: /<command> <Name>
+    permission: lolplugin.removewarp
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  warpinfo:
+    description: Zeigt Informationen über einen Warp-Punkt.
+    usage: /<command> <Name>
+    permission: lolplugin.warpinfo
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  trust:
+    description: Erlaubt einem Spieler, deine Home-Punkte zu nutzen.
+    usage: /<command> <Spieler>
+    permission: lolplugin.trust
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  untrust:
+    description: Entfernt die Vertrauenseinstellung für einen Spieler.
+    usage: /<command> <Spieler>
+    permission: lolplugin.untrust
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  back:
+    description: Teleportiert dich zu deiner letzten Position zurück.
+    usage: /<command>
+    permission: lolplugin.back
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  tpa:
+    description: Sendet eine Teleport-Anfrage an einen Spieler.
+    usage: /<command> <Spieler>
+  tpahere:
+    description: Sendet eine Teleport-Anfrage, um einen Spieler zu dir zu holen.
+    usage: /<command> <Spieler>
+  tpaccept:
+    description: Akzeptiert die letzte Teleport-Anfrage.
+    usage: /<command>
+  tpacancel:
+    description: Bricht eine Teleport-Anfrage ab.
+    usage: /<command>
+  rtp:
+    description: Teleportiert dich an einen zufälligen Ort in der Welt.
+    usage: /<command>
+  nickname:
+    description: Ändert deinen Spitznamen.
+    usage: /<command> <Name>
+    permission: lolplugin.nickname
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  invsee:
+    description: Öffnet das Inventar eines Spielers.
+    usage: /<command> <Spieler>
+    permission: lolplugin.invsee
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  endersee:
+    description: Öffnet die Enderchest eines Spielers.
+    usage: /<command> <Spieler>
+    permission: lolplugin.endersee
+    permission-message: Du hast keine Berechtigung für diesen Befehl.
+  ec:
+    description: Öffnet deine Enderchest.
+    usage: /<command>
+  recipe:
+    description: Zeigt das Rezept für den Warden-Beschwörungsblock.
+    usage: /<command>
+
+permissions:
+  lolplugin.admin:
+    description: Bietet Zugriff auf alle Admin-Befehle des Plugins.
+    default: op
+    children:
+      lolplugin.heal: true
+      lolplugin.feed: true
+      lolplugin.fly: true
+      lolplugin.flyspeed: true
+      lolplugin.explode: true
+      lolplugin.setspawn: true
+      lolplugin.setwarp: true
+      lolplugin.removewarp: true
+      lolplugin.warpinfo: true
+      lolplugin.trust: true
+      lolplugin.untrust: true
+      lolplugin.back: true
+      lolplugin.nickname: true
+      lolplugin.invsee: true
+      lolplugin.endersee: true
+      lolplugin.sethome: true
+      lolplugin.removehome: true
+
+  lolplugin.user:
+    description: Bietet Zugriff auf alle User-Befehle des Plugins.
+    default: true
+    children:
+      lolplugin.spawn: true
+      lolplugin.home: true
+      lolplugin.warp: true
+      lolplugin.tpa: true
+      lolplugin.tpahere: true
+      lolplugin.tpaccept: true
+      lolplugin.tpacancel: true
+      lolplugin.rtp: true
+      lolplugin.ec: true
+      lolplugin.trust: true
+      lolplugin.untrust: true

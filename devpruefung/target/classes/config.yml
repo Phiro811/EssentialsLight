@@ -1,0 +1,112 @@
+# config.yml
+
+messages:
+  no-permission: "&cDazu hast du keine Berechtigung."
+  console-only: "&cDieser Befehl kann nur von der Konsole ausgeführt werden."
+  player-only: "&cDieser Befehl kann nur von einem Spieler ausgeführt werden."
+  player-not-found: "&cSpieler '[player]' wurde nicht gefunden oder ist nicht online."
+  cooldown: "&cBitte warte noch &6[time] &cSekunden."
+  target-not-found: "&cSpieler '[target]' wurde nicht gefunden oder ist nicht online."
+  self-target-error: "&cDu kannst dich nicht zu dir selbst teleportieren." # Generische Nachricht, für TPA spezifisch überschreibbar
+
+  join:
+    first-join: "&aWillkommen auf dem Server, &b%player_name%&a! Viel Spaß!"
+    spawn-teleport: "&aDu wurdest zum Spawn teleportiert."
+    no-spawn: "&cDer Spawn wurde noch nicht gesetzt."
+
+  teleport:
+    busy: "&cDu bist bereits in einem Teleportationsprozess."
+    bypass: "&aTeleportation erfolgreich (keine Verzögerung)."
+    start: "&eTeleportation [reason] startet in &6[seconds] &eSekunden. Bitte bewege dich nicht!"
+    countdown: "&eTeleportation in... &6[remaining]"
+    success: "&aTeleportation erfolgreich."
+    cancelled: "&cDie Teleportation wurde abgebrochen, da du dich bewegt oder Schaden genommen hast."
+
+  # Nachrichten für TpaCommands (Punkt 2)
+  tpa:
+    usage: "&cBenutzung: /tpa <Spieler>"
+    tpahere-usage: "&cBenutzung: /tpahere <Spieler>"
+    self-target-error: "&cDu kannst dich nicht zu dir selbst teleportieren."
+    cooldown: "&cBitte warte &6[seconds] &cSekunden, bevor du eine neue TPA-Anfrage sendest."
+    already-pending: "&cDu hast bereits eine ausstehende TPA-Anfrage an &b[target]&c."
+    request-sent: "&aTPA-Anfrage an &b[target] &agesendet."
+    tpahere-request-sent: "&aTP-Anfrage an &b[target] &agesendet."
+    request-received: "&b[player] &emöchte sich zu dir teleportieren."
+    tpahere-request-received: "&b[player] &emöchte, dass du dich zu ihm teleportierst."
+    accept-prompt: "&eAkzeptiere mit &a/tpaccept&e oder lehne ab mit &c/tpacancel&e."
+    expired-receiver: "&cDie TPA-Anfrage von &b[player] &cist abgelaufen."
+    expired-sender: "&cDeine TPA-Anfrage an &b[target] &cist abgelaufen."
+    accept-success: "&aTeleportationsanfrage von &b[requester] &aakzeptiert."
+    accept-requester: "&a[player] &ahat deine Teleportationsanfrage akzeptiert." # Hinzugefügt für klarere Meldung
+    no-pending-request: "&cDu hast keine ausstehende Teleportationsanfrage."
+    request-invalid: "&cDie Teleportationsanfrage ist abgelaufen oder der Spieler ist nicht mehr online."
+    cancel-success-sender: "&cTeleportationsanfrage abgelehnt."
+    cancel-success-requester: "&cDeine Teleportationsanfrage wurde von &b[player] &cabgelehnt."
+
+  # Nachrichten für TrustCommands (Punkt 2)
+  trust:
+    usage: "&cBitte gib den Namen eines Spielers an."
+    already-trusted: "&cDu traust diesem Spieler bereits."
+    success-self: "&aDu traust jetzt &b[target]&a."
+    success-target: "&b[player] &atraut dir jetzt."
+  untrust:
+    not-trusted: "&cDu traust diesem Spieler nicht."
+    success-self: "&aDu traust &b[target] &anicht mehr."
+    success-target: "&b[player] &atraut dir nicht mehr."
+  trust-no-pvp: "&cDu kannst Spieler, denen du vertraust, nicht angreifen!"
+  self-trust-error: "&cDu kannst dir nicht selbst vertrauen."
+
+  # Nachrichten für RecipeCommands (Punkt 2)
+  recipe:
+    usage: "&cBenutzung: /recipe <Name>"
+    not-found: "&cRezept '[name]' nicht gefunden."
+    warden-header: "&a--- Warden Rezept ---"
+    warden-desc1: "&fUm den Warden zu beschwören, lege &b9 Spielerköpfe &fin einem 3x3-Gitter in die Werkbank."
+    warden-desc2: "&fDie Köpfe können in beliebiger Reihenfolge angeordnet werden."
+
+  # Nachrichten für RtpCommands (Punkt 2)
+  rtp:
+    searching: "&aSuche einen sicheren Teleportationsort..."
+    no-safe-location: "&cKonnte keinen sicheren Ort für die Teleportation finden. Bitte versuche es erneut."
+
+  # Nachrichten für WarpCommands (Punkt 2)
+  warp:
+    usage: "&cBenutzung: /warp <Name>"
+    setwarp-usage: "&cBenutzung: /setwarp <Name>"
+    removewarp-usage: "&cBenutzung: /removewarp <Name>"
+    warpinfo-usage: "&cBenutzung: /warpinfo <Name>"
+    max-warps-reached: "&cDu hast bereits die maximale Anzahl von &6[max]&c Warps gesetzt."
+    warp-set: "&aWarp '[name]' wurde gesetzt."
+    warp-not-found: "&cWarp '[name]' wurde nicht gefunden."
+    warp-removed: "&aWarp '[name]' wurde entfernt."
+    warp-info-header: "&a--- Warp-Informationen: [name] ---"
+    warp-info-world: "&eWelt: &f[world]"
+    warp-info-coords: "&eKoordinaten: &fX: [x], Y: [y], Z: [z]"
+    teleporting: "zum Warp [name]" # Grund für TeleportationManager
+
+  # Nachrichten für SpawnCommands (Punkt 2)
+  spawn:
+    setspawn-success: "&aSpawn wurde gesetzt!"
+    not-set: "&cEs wurde noch kein Spawn gesetzt."
+    teleporting: "zum Spawn" # Grund für TeleportationManager
+
+  # Nachrichten für HomeCommands (Punkt 2)
+  home:
+    usage: "&cBenutzung: /home <Name>"
+    sethome-usage: "&cBenutzung: /sethome <Name>"
+    removehome-usage: "&cBenutzung: /removehome <Name>"
+    max-homes-reached: "&cDu hast bereits die maximale Anzahl von &6[max]&c Homes gesetzt."
+    home-set: "&aHome '[name]' wurde gesetzt."
+    home-not-found: "&cHome '[name]' wurde nicht gefunden."
+    home-removed: "&aHome '[name]' wurde entfernt."
+    teleporting: "zu Home [name]" # Grund für TeleportationManager
+
+settings:
+  tpa-cooldown-seconds: 60
+  tpa-expiry-seconds: 30
+  rtp-range: 5000
+  rtp-max-attempts: 10
+  teleport-delay-seconds: 3
+  max-homes: 3
+  max-warps: 3
+  trust-cooldown-seconds: 3 # Für TrustCommands
